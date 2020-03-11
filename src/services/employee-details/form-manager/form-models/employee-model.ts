@@ -17,11 +17,23 @@ export class EmployeeDetailsModel implements  IEmployeeDetails {
      @fieldConstraint({
           validation: [Validators.required],
           onScreenMessage: {
-                'required': 'CUSTOMER_USER_MANAGEMENT.USER_DETAIL.FIELDS.GIVEN_NAME.VALID_ERR_MSG.REQUIRED'
+                'required': 'Employee name required'
           }
       })
     employee_name: string;
+    @fieldConstraint({
+          validation: [Validators.required],
+          onScreenMessage: {
+                'required': 'Employee salary required'
+          }
+      })
     employee_salary: string;
+    @fieldConstraint({
+          validation: [Validators.required],
+          onScreenMessage: {
+                'required': 'Employee age required'
+          }
+      })
     employee_age: string;
     profile_image: string;
     constructor( empdata: IEmployeeDetails = {
