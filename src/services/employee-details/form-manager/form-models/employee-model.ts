@@ -1,21 +1,32 @@
-
+import {
+  viewForm,
+  fieldConstraint
+} from '../../../../framework/generators/form-creators';
+import {
+  CustomValidatorsService
+} from '../../../../framework/utils/validators/custom-validators.service';
+import {Validators} from '@angular/forms';
 interface IEmployeeDetails {
     id: string;
     employee_name: string;
     employee_salary: string;
     employee_age: string;
     profile_image: string;
-    
 }
-
+@viewForm('EmployeeDetails')
 export class EmployeeDetailsModel implements  IEmployeeDetails {
     id: string;
+     @fieldConstraint({
+          validation: [Validators.required],
+
+      })
     employee_name: string;
     employee_salary: string;
     employee_age: string;
     profile_image: string;
     constructor( empdata: IEmployeeDetails = {
         id : '',
+       
         employee_name: '',
         employee_salary: '',
         employee_age: '',
