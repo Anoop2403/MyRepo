@@ -1,6 +1,6 @@
 import { Component, ViewChild } from "@angular/core";
 import { HttpClient, HttpHeaders } from "@angular/common/http";
-import {MatTable} from '@angular/material';
+import {MatTable} from '@angular/material/table';
 import { map } from "rxjs/operators";
 import {EmployeeDataService} from "../data-access-layer/employee-data.service"
 

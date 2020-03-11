@@ -5,7 +5,8 @@ import {
   SkipSelf
 } from '@angular/core';
 import { throwIfAlreadyLoaded } from './module-import-guard';
-import {EmployeeDataService} from '../../data-access-layer/employee-data.service'
+import {EmployeeDataService} from '../../data-access-layer/employee-data.service';
+import {FormLoaderService} from '../../services/employee-details/form-manager/form-loader.service';
 @NgModule({
   declarations: [],
   imports: [
@@ -13,7 +14,8 @@ import {EmployeeDataService} from '../../data-access-layer/employee-data.service
   exports: [
   ],
   providers: [
-    EmployeeDataService
+    EmployeeDataService,
+    FormLoaderService
   ]
 })
 export class CoreModule {
