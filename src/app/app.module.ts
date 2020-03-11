@@ -8,9 +8,17 @@ import { Platform } from '@angular/cdk/platform';
 import { AppComponent } from './app.component';
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { HttpInterceptor } from './http.interceptor';
-import {EmployeeDataService} from '../data-access-layer/employee-data.service';
+import {CoreModule} from './core/core.module'
 @NgModule({
-  imports:      [CommonModule, BrowserModule, FormsModule, HttpClientModule,BrowserAnimationsModule , MatTableModule ],
+  imports: [
+    CommonModule,
+    BrowserModule, 
+    FormsModule, 
+    HttpClientModule,
+    BrowserAnimationsModule, 
+    MatTableModule,
+    CoreModule 
+  ],
   declarations: [ AppComponent ],
   bootstrap:    [ AppComponent ],
   providers: [
@@ -20,7 +28,6 @@ import {EmployeeDataService} from '../data-access-layer/employee-data.service';
       multi: true
     },
     Platform,
-    EmployeeDataService
   ]
 })
 export class AppModule { }
