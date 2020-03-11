@@ -6,8 +6,7 @@ import {
 } from '@angular/core';
 import { throwIfAlreadyLoaded } from './module-import-guard';
 import {EmployeeDataService} from '../../data-access-layer/employee-data.service';
-import {FormLoaderService} from '../../services/employee-details/form-manager/form-loader.service';
-import {CommandHandlerService} from '../../services/employee-details/command-handler.service'
+import {FormLoaderService, CommandHandlerService} from '../../services/employee-details';
 @NgModule({
   declarations: [],
   imports: [

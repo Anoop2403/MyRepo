@@ -38,7 +38,6 @@ export class EmployeeDetailsModel implements  IEmployeeDetails {
     profile_image: string;
     constructor( empdata: IEmployeeDetails = {
         id : '',
-       
         employee_name: '',
         employee_salary: '',
         employee_age: '',
