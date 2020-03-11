@@ -1,0 +1,11 @@
+<div *ngIf="displayError()"
+     class="error-msg alert-danger text-center"
+     data-vandv="umEditUserNameError"
+     [@slideIn]>
+  <span class="s s-exclamation-triangle-warning"> </span>
+  <span *ngIf="multikeytranslate; else multiKeyTranslate">
+    {{ displayError()  | translate }}</span>
+  <ng-template #multiKeyTranslate>
+    {{ displayError()  | multikeytranslate : appMultiKeyTranslate }}
+  </ng-template>
+</div>
