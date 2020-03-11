@@ -16,7 +16,7 @@ import {
 @Component({
   selector: 'app-on-screen-message',
   templateUrl: './on-screen-message.component.html',
-  styleUrls: ['./on-screen-message.component.scss'],
+  styleUrls: ['./on-screen-message.component.css'],
   animations: [SLIDE_IN]
 })
 export class OnScreenMessageComponent {

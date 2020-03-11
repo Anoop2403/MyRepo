@@ -1,10 +1,8 @@
 import {
   viewForm,
-  fieldConstraint
-} from '../../../../framework/generators/form-creators';
-import {
+  fieldConstraint,
   CustomValidatorsService
-} from '../../../../framework/utils/validators/custom-validators.service';
+} from '../../../../framework';
 import {Validators} from '@angular/forms';
 interface IEmployeeDetails {
     id: string;
@@ -18,7 +16,9 @@ export class EmployeeDetailsModel implements  IEmployeeDetails {
     id: string;
      @fieldConstraint({
           validation: [Validators.required],
-
+          onScreenMessage: {
+                'required': 'CUSTOMER_USER_MANAGEMENT.USER_DETAIL.FIELDS.GIVEN_NAME.VALID_ERR_MSG.REQUIRED'
+          }
       })
     employee_name: string;
     employee_salary: string;

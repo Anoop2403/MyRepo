@@ -8,7 +8,8 @@ import { Platform } from '@angular/cdk/platform';
 import { AppComponent } from './app.component';
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { HttpInterceptor } from './http.interceptor';
-import {CoreModule} from './core/core.module'
+import {CoreModule} from './core/core.module';
+import {SharedModule} from './shared/shared.module';
 @NgModule({
   imports: [
     CommonModule,
@@ -17,7 +18,8 @@ import {CoreModule} from './core/core.module'
     HttpClientModule,
     BrowserAnimationsModule, 
     MatTableModule,
-    CoreModule 
+    CoreModule,
+    SharedModule
   ],
   declarations: [ AppComponent ],
   bootstrap:    [ AppComponent ],
