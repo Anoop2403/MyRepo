@@ -5,6 +5,7 @@ import {
   SkipSelf
 } from '@angular/core';
 import { throwIfAlreadyLoaded } from './module-import-guard';
+import {EmployeeDataService} from '../../data-access-layer/employee-data.service'
 @NgModule({
   declarations: [],
   imports: [
@@ -12,6 +13,7 @@ import { throwIfAlreadyLoaded } from './module-import-guard';
   exports: [
   ],
   providers: [
+    EmployeeDataService
   ]
 })
 export class CoreModule {
